@@ -3,16 +3,17 @@
 
 #include "stringf.h"
 
-class exception : public std::string {
+class string_exception : public std::string {
     public:
         template< typename... argv >
-        exception( const char* format, argv... args ) {
+        string_exception( const char* format, argv... args ) {
             std::string::operator=(stringf(format, args...));
         };
         const char* what() const { return c_str(); };
 };
 
-#define create_exception(T) class T : public exception { public: using exception::exception; };
+#define create_exception(T) class T : public string_exception { public: using string_exception::string_exception; };
+#define create_derived_exception(T,U) class T : public U { public: using U::U; };
 
 #endif
 
