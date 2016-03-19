@@ -1,5 +1,5 @@
-#ifndef EXCEPTION_H
-#define EXCEPTION_H
+#ifndef CUSTOM_STRING_EXCEPTION_H
+#define CUSTOM_STRING_EXCEPTION_H
 
 #include "stringf.h"
 
