@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 
-message(STATUS "** PREFIX ** ${CMAKE_INSTALL_PREFIX}")
-
 # set directory as project name
 get_filename_component(PROJECT ${CMAKE_CURRENT_LIST_DIR} NAME)
 string(REPLACE " " "_" PROJECT ${PROJECT})
