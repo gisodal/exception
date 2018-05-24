@@ -1,11 +1,17 @@
+DIR := $(shell cd "$( dirname "$0" )" && pwd)
+WMC := $(shell cd $(DIR)/../.. && pwd)
+
+ifeq ($(PREFIX),)
+	PREFIX=$(WMC)
+endif
 
 DEFAULTBUILDDIR := build
 DEBUGBUILDDIR	:= debug
 RELEASEBUILDDIR	:= release
-CURRENTDIR 		:= $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
-SOURCEDIR 		:= $(CURRENTDIR)
+SOURCEDIR 		:= $(DIR)
 
 MAKEFLAGS += --no-print-directory
+CMAKEFLAGS += -DCMAKE_INSTALL_PREFIX:PATH=$(PREFIX)
 
 .PHONY: build debug release clean help
 

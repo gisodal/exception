@@ -5,7 +5,7 @@ C++ hierarchical exception handling, including printf functionality for std::str
 ## Installation
 
 To install to `<install_dir>`, Type
-> make install PREFIX=\<install_dir\>
+> make PREFIX=\<install_dir\>
 
 Add `#include 'exception/exception.h'` to your source.
 
