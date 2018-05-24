@@ -20,9 +20,11 @@ Thumbs.db
 # directories #
 ###############
 
-usr
-tar
-bin
-obj
-lib
-
+/usr
+/tar
+/bin
+/obj
+/lib
+/build
+/release
+/debug
