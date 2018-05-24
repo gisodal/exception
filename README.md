@@ -4,11 +4,12 @@ C++ hierarchical exception handling, including printf functionality for std::str
 
 ## Installation
 
-To install to `<install_dir>`, Type
-> mkdir build
-> cd build
-> cmake -DCMAKE_INSTALL_PREFIX:PATH=\<install_dir\>
-> make install
+To install to `<install_dir>`, type
+
+    > mkdir build
+    > cd build
+    > cmake -DCMAKE_INSTALL_PREFIX:PATH=<install_dir> ..
+    > make install
 
 Add `#include 'exception/exception.h'` to your source.
 
